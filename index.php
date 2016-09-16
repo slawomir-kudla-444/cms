@@ -38,7 +38,7 @@ $app->get('/m/{module}[/[{method}[/[{p1}[/[{p2}[/[{p3}[/]]]]]]]]]', function (Re
         $obiekt->execiutMethod();
         
     } else {
-        echo "nie ma modułu";
+        echo "no nie ma modułu hej ho";
     }
     
     return $response;
