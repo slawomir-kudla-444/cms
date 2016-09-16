@@ -58,21 +58,12 @@ class ComposerStaticInit4f43e88e2376c4fd0b6dfaee319168d0
         ),
     );
 
-    public static $classMap = array (
-        'Smarty' => __DIR__ . '/..' . '/smarty/smarty/libs/Smarty.class.php',
-        'SmartyBC' => __DIR__ . '/..' . '/smarty/smarty/libs/SmartyBC.class.php',
-        'SmartyCompilerException' => __DIR__ . '/..' . '/smarty/smarty/libs/Smarty.class.php',
-        'SmartyException' => __DIR__ . '/..' . '/smarty/smarty/libs/Smarty.class.php',
-        'Smarty_Security' => __DIR__ . '/..' . '/smarty/smarty/libs/sysplugins/smarty_security.php',
-    );
-
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit4f43e88e2376c4fd0b6dfaee319168d0::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit4f43e88e2376c4fd0b6dfaee319168d0::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit4f43e88e2376c4fd0b6dfaee319168d0::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit4f43e88e2376c4fd0b6dfaee319168d0::$classMap;
 
         }, null, ClassLoader::class);
     }
